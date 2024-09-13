@@ -54,9 +54,12 @@
 }
 
 
-
 .rotate180deg {
     transform: rotate(180deg);
+}
+
+.zeroMarginTopBottom {
+    margin: 0 auto;
 }
 
 /* --- GENERALS --- */
@@ -65,14 +68,12 @@ body {
     margin: 0;
 }
 
-
-
 main {
     display: grid;
     grid-template-columns: 10% repeat(10, 1fr) 10%;
     gap: 32px;
     max-width: 1920px;
-    margin: auto;
+    margin: 32px auto;
 }
 
 section {
@@ -80,6 +81,7 @@ section {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 32px;
+    position: relative;
 }
 
 img {
@@ -99,7 +101,6 @@ a:hover {
     color: var(--accentColor2);
 }
 
-i {}
 
 /* --- TEXT --- */
 h1,
@@ -139,6 +140,11 @@ p {
     color: var(--baseTextDarkColor);
     font-family: "Merriweather", system-ui;
 
+}
+
+li {
+    color: var(--baseTextDarkColor);
+    font-family: "Merriweather", system-ui;
 }
 
 /*********************
@@ -257,7 +263,6 @@ header {
 footer {
     background: var(--primaryColorTranparent80);
     padding: 50px 10%;
-    margin-top: 32px;
 
     .logo {
         width: 300px;
@@ -496,7 +501,7 @@ a.btn:hover,
 /* --- ANIMAL ATTRIBUT --- */
 .animalAttributContainer {
 
-    grid-column: span 3;
+    width: calc(100% / 2 - 16px);
     text-align: center;
 
     .animalAttribut {
@@ -571,6 +576,7 @@ a.btn:hover,
     display: grid;
     grid-template-columns: 10% 1fr 10%;
 
+
     h1 {
         background: var(--secondaryColor);
         font-size: 2rem;
@@ -616,5 +622,53 @@ a.btn:hover,
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 32px
+    }
+}
+
+/* --- INDIVIDUAL ANIMALPAGE --- */
+.basicInfo {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+
+    h1 {
+        text-align: left;
+    }
+
+    div {
+        display: flex;
+        gap: 5px;
+    }
+
+    p:first-child {
+        font-weight: 700;
+    }
+}
+
+img.basicInfo {
+    height: 500px;
+}
+
+.attributes {
+    display: flex;
+    justify-content: space-between;
+    row-gap: var(--standardSpacing);
+    flex-wrap: wrap;
+}
+
+.animalImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    height: fit-content;
+
+
+    img {
+        width: calc(100% / 3 - 32px);
+        display: block;
     }
 }

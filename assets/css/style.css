@@ -62,10 +62,21 @@
     margin: 0 auto;
 }
 
+.MarginBottom32px {
+    margin-bottom: 32px;
+}
+
+
 /* --- GENERALS --- */
+
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
+
 }
 
 main {
@@ -114,32 +125,37 @@ p {
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin: var(--mediumSpacing) 0;
+    font-size: 1.9rem;
+    margin: var(--mediumSpacing) 0 0 0;
     text-align: center;
     font-family: "Fira Sans", sans-serif;
     font-weight: 700;
+    text-wrap: balance;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0px;
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
+    text-wrap: balance;
+
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0px;
     font-family: "Fira Sans", sans-serif;
     font-weight: 300;
+    text-wrap: balance;
+
 }
 
 p {
     margin: 0 0 var(--smallSpacing) 0;
     color: var(--baseTextDarkColor);
     font-family: "Merriweather", system-ui;
-
+    font-size: 1.1rem;
 }
 
 li {
@@ -174,7 +190,7 @@ header {
         /* overflow: hidden; */
 
         a {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--baseTextDarkColor);
             text-decoration: none;
             font-weight: 450;
@@ -226,29 +242,38 @@ header {
 /* --- GLOBAL NAVIGATION --- */
 .globalNav {
     grid-column: 1/3;
-    grid-row: 1/-1;
+    /* grid-row: 1/-1; */
+    height: 100vh;
     background: var(--primaryColor);
     padding-top: 50px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: sticky;
+    top: 50px;
 
     div {
-        float: right;
+
+
         margin: var(--mediumSpacing);
 
         i {
             display: none;
+            color: var(--accentColor2);
         }
 
         a {
             text-decoration: none;
             font-weight: 500;
             color: var(--baseTextDarkColor);
+            font-size: 1.1rem;
         }
 
     }
 
     div:hover i {
         display: inline;
+        font-size: 1.2rem;
     }
 
     .decor {
@@ -259,10 +284,22 @@ header {
     }
 }
 
+.onePageContentContainer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 32px;
+    grid-column: 3/-2;
+}
+
+.onePageContent {
+    grid-column: span 5;
+}
+
 /* --- FOOTER --- */
 footer {
     background: var(--primaryColorTranparent80);
     padding: 50px 10%;
+    margin-top: 32px;
 
     .logo {
         width: 300px;
@@ -271,7 +308,7 @@ footer {
     p,
     a {
         font-family: "Merriweather", system-ui;
-        font-size: .9rem;
+        font-size: 1rem;
         margin: 5px 0;
     }
 
@@ -283,7 +320,7 @@ footer {
         max-width: 1920px;
 
         i {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--accentColor2);
         }
 
@@ -342,7 +379,7 @@ a.btn {
     text-decoration: none;
     color: var(--baseTextDarkColor);
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     box-shadow: var(--shadow);
     height: 45px;
@@ -367,7 +404,7 @@ a.btn:hover,
 
 /* --- FOCUS ENTRY POINT --- */
 .focusEntryPoint {
-    height: 250px;
+    height: 400px;
     display: flex;
     grid-column: span 5;
     border-radius: var(--borderRadius);
@@ -379,7 +416,7 @@ a.btn:hover,
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 30%;
+        height: 20%;
         border-radius: 0 0 var(--borderRadius) var(--borderRadius);
         display: flex;
         justify-content: center;
@@ -388,7 +425,7 @@ a.btn:hover,
 
     p {
         font-family: "Fira Sans", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
 }
@@ -415,9 +452,13 @@ a.btn:hover,
         color: var(--baseTextLightColor);
     }
 
+    .content {
+        font-size: 1rem;
+    }
+
     .date,
     .author {
-        font-size: .9rem;
+        font-size: 1rem;
         font-style: italic;
         text-align: right;
     }
@@ -427,8 +468,6 @@ a.btn:hover,
 
 /* --- ANSAT CARD --- */
 .employeCard {
-    grid-column: span 3;
-
     img {
         height: 250px;
     }
@@ -579,7 +618,7 @@ a.btn:hover,
 
     h1 {
         background: var(--secondaryColor);
-        font-size: 2rem;
+        font-size: 2.1rem;
         padding: var(--mediumSpacing);
 
         border-radius: var(--borderRadius);
@@ -595,7 +634,7 @@ a.btn:hover,
 .indexIntro {
     background: var(--primaryColorTranparent50);
     border-radius: var(--borderRadius);
-    padding: var(--largeSpacing);
+    padding: 80px;
 
     div {
         margin-bottom: var(--smallSpacing);
@@ -610,6 +649,11 @@ a.btn:hover,
     a {
         text-decoration: none;
         color: var(--baseTextDarkColor);
+    }
+
+    p,
+    a {
+        margin: 20px 0;
     }
 }
 
@@ -671,4 +715,71 @@ img.basicInfo {
         width: calc(100% / 3 - 32px);
         display: block;
     }
+}
+
+/* --- ABOUT US --- */
+.omOs {
+
+    #ansatte,
+    #ejerne {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #historie img {
+        height: 200px;
+    }
+
+    p {
+        grid-column: unset;
+    }
+
+    .imgContainer {
+        position: relative;
+    }
+
+    .ejerHoverLeft,
+    .ejerHoverRight {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .ejerHoverRight {
+        left: 50%;
+    }
+
+    #faciliteter {
+
+        .container {
+            background: var(--primaryColorTranparent50);
+            border-radius: var(--borderRadius);
+            padding: 80px;
+            display: grid;
+            grid-column: 1/-1;
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+
+        .navigation {
+            grid-column: 1/-1;
+            margin: auto;
+            margin-top: var(--mediumSpacing);
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        button:hover {
+            color: var(--accentColor2);
+        }
+    }
+
+
+
 }

@@ -372,7 +372,7 @@ button {
     cursor: pointer;
 }
 
-a.btn {
+.btn {
     background: var(--accentColor2);
     padding: var(--smallSpacing) var(--mediumSpacing);
     border-radius: 30px;
@@ -387,18 +387,20 @@ a.btn {
     /* max-width: 300px; */
     min-width: 200px;
     margin: var(--smallSpacing) auto;
+    border: none;
+    transition: .5s;
+
 }
 
 
 /* --- HOVER--- */
 .focusEntryPoint:hover,
 .articleCard:hover,
-a.btn:hover,
+.btn:hover,
 .testFEP:hover,
 .animalCard:hover {
     transform: scale(.99);
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.359);
-    transition: .5s;
     text-decoration: none;
 }
 
@@ -409,6 +411,7 @@ a.btn:hover,
     grid-column: span 5;
     border-radius: var(--borderRadius);
     position: relative;
+    transition: .5s;
     box-shadow: var(--shadow);
 
     div {
@@ -434,6 +437,7 @@ a.btn:hover,
 /* --- ARTIKEL CARD --- */
 .articleCard {
     border-radius: var(--borderRadius);
+    transition: .5s;
     box-shadow: var(--shadow);
 
     img {
@@ -486,8 +490,7 @@ a.btn:hover,
     position: relative;
     box-shadow: var(--shadow);
     border-radius: var(--borderRadius);
-
-
+    transition: .5s;
 
     div {
         position: absolute;
@@ -509,6 +512,7 @@ a.btn:hover,
     grid-column: span 1;
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow);
+    transition: .5s;
 
     img {
         border-radius: var(--borderRadius) var(--borderRadius)0 0;
@@ -774,6 +778,8 @@ img.basicInfo {
             background: none;
             border: none;
             font-size: 1.5rem;
+            transition: .3s;
+
         }
 
         button:hover {
@@ -796,6 +802,8 @@ img.basicInfo {
         width: 50%;
         height: 100px;
         padding: 0;
+        transition: .3s;
+
 
         div {
             background: rgba(255, 255, 255, 0.432);
@@ -919,7 +927,125 @@ img.basicInfo {
     }
 }
 
-/** SPECIFICITY FIX */
+/* --- TEST --- */
+
+.testStart {
+
+    img {
+        grid-column: span 3;
+        height: 80vh;
+    }
+
+    div {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+}
+
+.testQuestion {
+    h2 {
+        text-align: center;
+    }
+
+    .answerContainer {
+        grid-column: 2/-2;
+        display: flex;
+        gap: 32px;
+
+        .testAnswer {
+            background: var(--primaryColor);
+            border-radius: var(--borderRadius);
+            display: flex;
+            width: calc(100% / 3);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: var(--standardSpacing);
+            border: none;
+            box-shadow: var(--shadow);
+            transition: .3s;
+        }
+
+        .testAnswer:hover {
+            transform: rotate(2deg);
+        }
+    }
+
+    .buttons {
+        grid-column: 2/-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .back {
+            border: none;
+            background: none;
+            font-size: 2rem;
+        }
+
+        .btn {
+            margin: var(--standardSpacing);
+        }
+    }
+
+}
+
+.testResult {
+
+    h1,
+    h2 {
+        grid-column: 1/-1;
+        text-align: center;
+
+    }
+
+    img {
+        width: 25%
+    }
+
+    .resultContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        margin: var(--largeSpacing);
+        margin-left: 15px;
+    }
+
+    .result {
+        grid-column: 1/-1;
+        display: flex;
+        gap: 15px;
+        background: var(--primaryColorTranparent50);
+        border-radius: var(--borderRadius);
+
+
+    }
+
+
+
+
+    .attributesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        i {
+            font-size: 20px;
+        }
+
+        .animalAttributContainer {
+            width: calc(100% / 2 - 8px);
+        }
+    }
+}
+
+
+/** SPECIFICITY FIX SKAL VÆRE TIL SIDST I CSS FILEN */
 .hidden {
     display: none;
 }

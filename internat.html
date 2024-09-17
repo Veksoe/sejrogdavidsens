@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en"> <!--UPDATE-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="-"> <!--UPDATE-->
+    <meta name="keywords" content="-"> <!--UPDATE-->
+
+    <title>Document</title> <!--UPDATE-->
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/"> <!-- UPDATE-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/javascript/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="./assets/img/placeholder.jpg" alt="" class="logo"></a>
+        <!-- HUSK UPDATE ALT TEKST!-->
+        <nav>
+
+            <div class="dropdown"><a href="#" class="dropdownBtn">Sejr & Davidsens <i
+                        class="fa fa-caret-down "></i></a><!-- HUSK UPDATE LINK!-->
+                <div class="dropdown-content">
+                    <a href="om-os.html">Om Os</a> <!-- HUSK UPDATE LINK!-->
+                    <a href="#">Artikler</a> <!-- HUSK UPDATE LINK!-->
+                    <a href="#">Fysisk Butik</a> <!-- HUSK UPDATE LINK!-->
+
+                </div>
+            </div>
+            <a href="#">Adfærdstræning</a>
+            <a href="internat.html">Internat</a>
+            <a href="#">Pension</a>
+            <a href="#">Kontakt</a>
+            <button><i class="fa-solid fa-user"></i></button>
+        </nav>
+    </header>
+
+    <main class="zeroMarginTopBottom ">
+        <div class="globalNav">
+            <div><i class="fa-solid fa-paw "></i> <a href="#dyr">Vores dyr</a></div>
+            <div class="decor"></div>
+            <div><i class="fa-solid fa-paw "></i> <a href="#genereltInfo">Generelt info om adoption</a></div>
+            <div class="decor"></div>
+            <div><i class="fa-solid fa-paw "></i> <a href="#pris">Priser</a></div>
+            <div class="decor"></div>
+            <div><i class="fa-solid fa-paw "></i> <a href="#forInfo">Info før adoption</a></div>
+            <div class="decor"></div>
+            <div><i class="fa-solid fa-paw "></i> <a href="#efterInfo">Info efter adoption</a></div>
+            <div class="decor"></div>
+            <div><i class="fa-solid fa-paw "></i> <a href="#indlevering">Info om indlevering</a></div>
+
+
+        </div>
+        <div class="onePageContentContainer">
+            <h1>Internat</h1>
+            <section class="fullWidth" id="intro"> <!-- Intro-->
+                <img src="./assets/img/placeholder.jpg" alt="" class="onePageContent"> <!-- Husk alt tekst-->
+                <p class="onePageContent">Vi har et stort internat, hvor vi på hvilket som helst tidspunkt har omkring
+                    20 hunde og katte, som er klar til at finde sig et godt hjem.
+                    Vores faciliteter gør at alle dyr har en god levestandart og bliver taget sig af på daglig basis af
+                    vores ansatte og frivillige.
+                    Alle dyr som er sat til adoption har haft basal træning, er chippet og vacineret og er dømt klar til
+                    adoption af vores personale.</p>
+            </section>
+            <section class="fullWidth" id="dyr"> <!-- dyr-->
+                <h2 class="fullWidth">Vores dyr</h2>
+                <div class="fullWidth animals">
+                    <button id="cat">
+                        <div>
+                            <p>Kat</p>
+                        </div>
+                    </button>
+                    <button id="dog">
+                        <div class="active">
+                            <p>Hund</p>
+                        </div>
+                    </button>
+                    <div class="filterContainer">
+                        <div class="filterGroup">
+                            <h3>Trænbarhed <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="tranbarhedLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="tranbarhedModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="tranbarhedMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Energi niveau <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="energiLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="energiModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="energiMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Fælde niveau <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="feldeLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="feldeModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="feldeMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Pelspleje <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="pelsplejeLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="pelsplejeModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="pelsplejeMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Gøen <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="goenLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="goenModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="goenMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Størrelse <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="storrelseLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="storrelseModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="storrelseMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Temperament <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="temperamentLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="temperamentModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="temperamentMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Allergivenlig <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="allergivenligLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="allergivenligModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="allergivenligMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Boligforhold <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="boligforholdLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="bogligforholdModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="boligforholdMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filterGroup">
+                            <h3>Savl <i class="fa-solid fa-chevron-right "></i></h3>
+                            <div class="options hidden">
+                                <label class="toggle">
+                                    <input id="savlLidt" type="checkbox" value="x" />
+                                    <span class="tag">Lidt</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="savlModerat" type="checkbox" value="x" />
+                                    <span class="tag">Moderat</span>
+                                </label>
+
+                                <label class="toggle">
+                                    <input id="savlMeget" type="checkbox" value="x" />
+                                    <span class="tag">Meget</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animalContainer">
+                        <a href="individuelt-dyr.html" class="animalCard "><!-- HUSK UPDATE LINK!-->
+
+                            <img src="./assets/img/placeholder.jpg" alt=""> <!-- HUSK UPDATE ALT TEKST!-->
+                            <div>
+                                <h3 class="name">Navn</h3>
+                                <p>Køn: <span class="speices">Art+køn</span></p>
+                                <p>Race: <span class="race"> Race</span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="fullWidth"> <!-- Test-->
+                <a href="#" class="testFEP "><!-- HUSK UPDATE LINK!-->
+
+                    <img src="./assets/img/test-hunde.jpg" alt="En samling af hunde fra forskellige racer">
+                    <!-- HUSK UPDATE ALT TEKST!-->
+                    <div>
+                        <h2>I tvivl om hvilken race du skal have? Tag testen!</h2>
+                    </div>
+                </a>
+            </section>
+            <section class="fullWidth" id="genereltInfo"> <!-- generelt info-->
+                <h2 class="fullWidth">Generelt info om adoption</h2>
+                <img src="./assets/img/placeholder.jpg" alt="" class="onePageContent"> <!-- Husk alt tekst-->
+                <div class="onePageContent">
+                    <p>At adoptere et kæledyr er en stor beslutning, og det kræver nøje overvejelser. Hos Sejr og
+                        Davidsens Dyreinternat håber vi altid på, at dyrene finder deres forevigehjem, og derfor lægger
+                        vi stor vægt på at informere og rådgive, så du er klar over, hvad du skal forvente når du tager
+                        en hund eller kat med hjem.</p>
+                    <p>I dagens Danmark oplever vi mere end nogensinde før, at dyr bliver efterladt i det fri, eller
+                        afleveret på internater. Når man overvejer at adoptere et dyr, er der mange faktorer at tage
+                        højde for, da både hunde og katte kan leve i mange år. Er jeg forberedt på at tage ansvar for
+                        dyret de næste måske 15 år? Og har jeg den følelsesmæssige kapacitet til at tage mig af dyret i
+                        det lange løb? Har jeg en bolig der er passende for et kæledyr, og er jeg nok hjemme til at
+                        kunne opfylde dets behov? Har jeg den nødvendige økonomi til foder, dyrelægeregninger,
+                        forsikringer og andre udgifter?</p>
+                    <p>
+                        Vi har derfor samlet al den nødvendige information, så du er bedst muligt forberedt til at give
+                        dit nye kæledyr et trygt og kærligt hjem.
+                    </p>
+
+                </div>
+            </section>
+            <section class="fullWidth" id="pris"> <!-- pris-->
+                <div class="calloutTextbox onePageContent">
+                    <div>
+                        <i class="fa-solid fa-cat"></i>
+                    </div>
+                    <h3>Adoptionspris for katte</h3>
+                    <p>Prisen for at adoptere en kat fra internatet er 1.100 kroner. Prisen er inklusiv:</p>
+                    <ul>
+                        <li>Dyrlægeeftersyn, med test for katteaids og -leukæmi</li>
+                        <li>Neutralisering (kastrering/sterilisering)</li>
+                        <li>Vaccination</li>
+                        <li>Øremærkning og chipning</li>
+                        <li>Registrering i Det Danske Katteregister</li>
+                        <li>Behandling for orm og lopper</li>
+                    </ul>
+                </div>
+                <div class="calloutTextbox onePageContent">
+                    <div>
+
+                        <i class="fa-solid fa-dog"></i>
+                    </div>
+                    <h3>Adoptionspris for hunde</h3>
+                    <p>Prisen for at adoptere en hund fra internatet variere fra 1.500-4.000 kroner, alt efter hundens
+                        race. Prisen er inklusiv:</p>
+                    <ul>
+                        <li>Dyrlægeeftersyn</li>
+                        <li>Neutralisering (kastrering/sterilisering)</li>
+                        <li>Vaccination</li>
+                        <li>Øremærkning og chipning</li>
+                        <li>Registrering i Det Danske Hunderegister</li>
+                        <li>Behandling for orm og lopper</li>
+                        <li>Træning og socialisering</li>
+                    </ul>
+                </div>
+
+            </section>
+            <section class="fullWidth" id="forInfo"> <!-- Før-->
+                <h2 class="fullWidth">Godt at vide før adoption</h2>
+                <div class="onePageContent">
+                    <p>Et kæledyr er en del af familien og, ligesom børn, har de behov og medfører omkostninger. En
+                        forskel er dog, at det ikke er tilladt at have dyr alle steder, så det første du skal have styr
+                        på er, om du overhovedet må have et kæledyr hvor du bor. Det næste er at sætte sig ind i hvad du
+                        egentlig gerne vil have; en hvalp, en killing, en ung voksen, eller en senior, og hvad der
+                        ligger i at vælge det du ønsker. </p>
+                    <p>
+                        Når du har fundet ud af hvad du kunne tænke dig, er det altid en god ide at researche lidt for
+                        at blive klogere. Undersøg hunderacen, eller hvad du skal være opmærksom på, når en kat skal
+                        lære et ny sted at kende. Hvad kræver racen af vedligeholdelse? Fælder den meget, hvor meget og
+                        ofte skal den børstes eller vaskes? Er der helbredsmæssige ting at forholde sig til ved den
+                        race?
+                    </p>
+
+                </div>
+                <img src="./assets/img/placeholder.jpg" alt="" class="onePageContent"> <!-- Husk alt tekst-->
+                <img src="./assets/img/placeholder.jpg" alt="" class="onePageContent"> <!-- Husk alt tekst-->
+                <div class="onePageContent">
+                    <p>Det er et levende væsen du bringer ind i dit hjem, der skal have foder og til dyrlægen en gang i
+                        mellem, så det er vigtigt at tjekke op på hvad det kan komme til at koste. Der kan også være
+                        omkostninger til forsikring. Vi anbefaler at man sætter 300-600 kroner til siden til sit kæledyr
+                        om måneden til foder, dyrelægeregninger og andre nødvendige udgifter som snor, legetøj, og
+                        børster.</p>
+                    <p>
+                        Det er også en rigtig god ide at komme og besøge katten eller hunden du gerne vil adoptere, lære
+                        den lidt at kende og sikre at dyret passer til din livsstil og hjem.
+                    </p>
+                    <p>
+                        Har du fået styr på hvilket dyr du gerne vil adoptere, og har fundet det helt perfekte, nye
+                        familiemedlem i internatet, er sidste skridt at få købt de essentielle ting ind, så du har dem
+                        klar når du henter din nye hund eller kat. Vi har her samlet vores anbefaling:
+                    </p>
+
+                </div>
+                <div class="calloutTextbox onePageContent">
+                    <div>
+                        <i class="fa-solid fa-cat"></i>
+                    </div>
+                    <h3>Essentielle at have til kat</h3>
+                    <ul>
+                        <li>Kattetransportkasse</li>
+                        <li>Kattebakke og kattegrus</li>
+                        <li>Mad og drikkeskål</li>
+                        <li>Foder, meget gerne det samme som den får på internatet</li>
+                        <li>Legetøj</li>
+                    </ul>
+                </div>
+                <div class="calloutTextbox onePageContent">
+                    <div>
+
+                        <i class="fa-solid fa-dog"></i>
+                    </div>
+                    <h3>Essentielle at have til hunde</h3>
+
+                    <ul>
+                        <li>Hunde transportkasse</li>
+                        <li>Hundesnor og poser</li>
+                        <li>Mad og drikkeskål</li>
+                        <li>Foder, meget gerne det samme som den får på internatet</li>
+                        <li>Legetøj</li>
+                    </ul>
+                </div>
+                <div class="onePageContent">
+
+                    <p>
+                        Når du skal hente dit nye kæledyr, skal du tage højde for at adoptionen ofte tager mellem 1-1½
+                        time. På den måde er der god tid til at blive rådgivet og få styr på diverse dokumenter og
+                        registreringer.
+                    </p>
+                    <p>
+                        Når du skal hente dit nye kæledyr, skal du tage højde for at adoptionen ofte tager mellem 1-1½
+                        time. På den måde er der god tid til at blive rådgivet og få styr på diverse dokumenter og
+                        registreringer.
+                    </p>
+                </div>
+                <div class="onePageContent">
+                    <a href="#" class="focusEntryPoint "><!-- HUSK UPDATE LINK!-->
+                        <img src="./assets/img/butik.jpg" alt=""> <!-- HUSK UPDATE ALT TEKST!-->
+                        <div>
+                            <p> Se hvad vi sælger i vores butik</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="fullWidth" id="efterInfo"> <!-- Efter-->
+                <h2 class="fullWidth">Godt at vide efter adoption</h2>
+
+            </section>
+            <section class="fullWidth" id="indlevering"> <!-- Indlevering-->
+                <h2 class="fullWidth">Info om indlevering af dyr til internatet</h2>
+                <div class="onePageContent">
+                    <p>Der kan være mange grunde til at et dyr bliver indleveret hos os. Uanset grunden til at et dyr
+                        har brug for et nyt hjem, er vi her for at hjælpe og sikre, at processen bliver en tryg og
+                        positiv oplevelse for både dyret og ejeren.</p>
+                    <p> Hos Sejr & Davidsens Dyrepension og -internat tager vi imod herreløse, nødstedte, eller svigtede
+                        hunde og katte, som kan indleveres af både ejere og myndighederne.</p>
+                    <p>Går du med tanker om at indlevere et dyr? Vi opfordrer dig til at kontakt os på hverdage mellem
+                        9:00 og 12:00, på telefonnummer <a href="tel:">+45 71 23 45 67</a>, til en uforpligtende
+                        samtale, hvor du kan høre nærmere eller lave en aftale. Bemærk venligst, at vi opkræver et
+                        indleveringsgebyr, som du kan
+                        få oplyst ved at kontakte os.</p>
+                </div>
+                <img src="./assets/img/placeholder.jpg" alt="" class="onePageContent"> <!-- Husk alt tekst-->
+
+            </section>
+
+            <section class="fullWidth MarginBottom32px"> <!-- FEP-->
+                <a href="#" class="focusEntryPoint "><!-- HUSK UPDATE LINK!-->
+
+                    <img src="./assets/img/placeholder.jpg" alt=""> <!-- HUSK UPDATE ALT TEKST!-->
+                    <div>
+                        <p> Læs om vores adfærdstræning</p>
+                    </div>
+                </a>
+                <a href="#" class="focusEntryPoint"><!-- HUSK UPDATE LINK!-->
+
+                    <img src="./assets/img/placeholder.jpg" alt=""> <!-- HUSK UPDATE ALT TEKST!-->
+                    <div>
+                        <p>Se alle vores artikler</p>
+                    </div>
+                </a>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="zeroMarginTopBottom">
+
+        <div class="footerTop">
+            <img src="./assets/img/placeholder.jpg" alt="" class="logo"><!-- HUSK UPDATE ALT TEKST!-->
+            <div class="contactInfo">
+                <h3>Kontakt</h3>
+                <div class="address">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Solbærvej 123,<br>
+                        9000 Aalborg,<br>
+                        Danmark</p>
+                </div>
+                <div> <i class="fa-solid fa-phone"></i><a href="tel:">+45 71 23 45 67</a></div>
+                <div><i class="fa-solid fa-at"></i><a href="mailto:">kontakt@sejrdavidsen.dk </a></div>
+                <p>CVR: 99 00 11 88</p>
+            </div>
+            <div class="sitemap">
+                <h3>Genveje</h3>
+                <a href="#">Find den rette race - test</a>
+                <a href="#">Bliv frivillig</a>
+                <a href="#">Indlever dyr</a>
+                <a href="#">Vedtægter</a>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <div>
+                <h3>Åbningstider</h3>
+                <p>Mandag - Fredag: 08:00 - 18:00 </p>
+                <p>Lørdag: 09:00 - 16:00 </p>
+                <p>Søndag: 10:00 - 14:00 </p>
+            </div>
+            <div class="sponsers">
+                <a href="#"><img src="./assets/img/placeholder.jpg" alt=""></a><!-- HUSK UPDATE ALT TEKST!-->
+                <a href="#"><img src="./assets/img/placeholder.jpg" alt=""></a><!-- HUSK UPDATE ALT TEKST!-->
+                <a href="#"><img src="./assets/img/placeholder.jpg" alt=""></a><!-- HUSK UPDATE ALT TEKST!-->
+            </div>
+            <div class="donate">
+                <h3>Doner et beløb, og hver med til at sikre at vi altid har midlerne til at tage os af de vidunderlige
+                    hunde og katte.</h3>
+                <p>Konto: 9092 2028180</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

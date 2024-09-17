@@ -6,7 +6,7 @@
 :root {
 
     /* COLORS */
-    --primaryColor: #589FA3;
+    --primaryColor: hsl(183, 30%, 49%);
     --primaryColorTranparent50: hsl(183, 30%, 49%, .5);
     --primaryColorTranparent80: hsl(183, 30%, 49%, .8);
     --secondaryColor: #2BC7C0;
@@ -65,6 +65,8 @@
 .MarginBottom32px {
     margin-bottom: 32px;
 }
+
+
 
 
 /* --- GENERALS --- */
@@ -187,7 +189,6 @@ header {
 
     nav {
         display: flex;
-        /* overflow: hidden; */
 
         a {
             font-size: 1.2rem;
@@ -253,8 +254,6 @@ header {
     top: 50px;
 
     div {
-
-
         margin: var(--mediumSpacing);
 
         i {
@@ -278,9 +277,10 @@ header {
 
     .decor {
         width: 2px;
-        height: 30px;
+        height: 20px;
         color: var(--baseTextDarkColor);
-
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -570,7 +570,7 @@ a.btn:hover,
 
 /* --- CALLOUT TEXT BOX --- */
 .calloutTextbox {
-    grid-column: span 3;
+    /* grid-column: span 3; */
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
     padding-bottom: var(--mediumSpacing);
@@ -759,6 +759,7 @@ img.basicInfo {
             display: grid;
             grid-column: 1/-1;
             grid-template-columns: 1fr 1fr;
+            gap: 32px;
         }
 
 
@@ -780,6 +781,145 @@ img.basicInfo {
         }
     }
 
+}
+
+/* --- INTERNAT --- */
+.animals {
+    background: var(--primaryColor);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: var(--borderRadius);
+
+    button {
+        border: none;
+        background: none;
+        width: 50%;
+        height: 100px;
+        padding: 0;
+
+        div {
+            background: rgba(255, 255, 255, 0.432);
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--borderRadius) var(--borderRadius) 0 0;
 
 
+        }
+
+
+
+        p {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-family: "Fira Sans", sans-serif;
+            font-weight: 500;
+            letter-spacing: 5px;
+        }
+    }
+
+
+
+    button#dog,
+    button#cat {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    button#dog {
+        border-radius: 0 var(--borderRadius) 0 0;
+        /* UPDATE BILLEDE!! */
+        background-image: url("../img/hero.jpg");
+
+        div {
+            border-radius: 0 var(--borderRadius) 0 0;
+        }
+    }
+
+    button#cat {
+        border-radius: var(--borderRadius)0 0 0;
+        /* UPDATE BILLEDE!! */
+        background-image: url("../img/kat-i-skab.jpg");
+
+        div {
+            border-radius: var(--borderRadius)0 0 0;
+
+        }
+    }
+
+    div.active {
+        background: var(--accentColor2Tranparent80);
+    }
+
+    button:hover div {
+        background: var(--accentColor2Tranparent80);
+    }
+
+    .filterContainer {
+        width: 25%;
+        border-radius: 0 0 0 var(--borderRadius);
+        background: var(--accentColor1);
+        padding: var(--standardSpacing);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: var(--smallSpacing);
+
+
+        h3 {
+            color: var(--baseTextLightColor);
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        i.active {
+            color: var(--accentColor2);
+        }
+
+        .filterGroup {
+            position: relative;
+
+
+
+        }
+    }
+
+    .animalContainer {
+        width: 75%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: var(--xLargeSpacing);
+    }
+
+}
+
+.options {
+    position: absolute;
+    right: -115px;
+    top: 0;
+    background: var(--accentColor2);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: var(--standardSpacing) var(--smallSpacing);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.137);
+    accent-color: var(--accentColor1);
+
+    toogle {
+        font-family: "Fira Sans", sans-serif;
+        color: var(--baseTextDarkColor);
+
+    }
+}
+
+/** SPECIFICITY FIX */
+.hidden {
+    display: none;
 }

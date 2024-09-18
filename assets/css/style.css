@@ -241,7 +241,7 @@ header {
 }
 
 /* --- GLOBAL NAVIGATION --- */
-.globalNav {
+.localNav {
     grid-column: 1/3;
     /* grid-row: 1/-1; */
     height: 100vh;
@@ -271,6 +271,11 @@ header {
     }
 
     div:hover i {
+        display: inline;
+        font-size: 1.2rem;
+    }
+
+    i.active {
         display: inline;
         font-size: 1.2rem;
     }
@@ -930,6 +935,9 @@ img.basicInfo {
 /* --- TEST --- */
 
 .testStart {
+    h2 {
+        text-align: center;
+    }
 
     img {
         grid-column: span 3;
@@ -969,10 +977,19 @@ img.basicInfo {
             border: none;
             box-shadow: var(--shadow);
             transition: .3s;
+
         }
+
 
         .testAnswer:hover {
             transform: rotate(2deg);
+
+        }
+
+        .testAnswer.active {
+            transform: rotate(2deg) scale(1.1);
+
+
         }
     }
 

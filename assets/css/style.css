@@ -518,6 +518,7 @@ button {
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow);
     transition: .5s;
+    height: 265px;
 
     img {
         border-radius: var(--borderRadius) var(--borderRadius)0 0;
@@ -805,7 +806,7 @@ img.basicInfo {
         border: none;
         background: none;
         width: 50%;
-        height: 100px;
+        height: 200px;
         padding: 0;
         transition: .3s;
 
@@ -846,8 +847,7 @@ img.basicInfo {
 
     button#dog {
         border-radius: 0 var(--borderRadius) 0 0;
-        /* UPDATE BILLEDE!! */
-        background-image: url("../img/hero.jpg");
+        background-image: url("../img/hund.jpg");
 
         div {
             border-radius: 0 var(--borderRadius) 0 0;
@@ -856,8 +856,7 @@ img.basicInfo {
 
     button#cat {
         border-radius: var(--borderRadius)0 0 0;
-        /* UPDATE BILLEDE!! */
-        background-image: url("../img/kat-i-skab.jpg");
+        background-image: url("../img/kat.jpg");
 
         div {
             border-radius: var(--borderRadius)0 0 0;
@@ -888,6 +887,7 @@ img.basicInfo {
             color: var(--baseTextLightColor);
             font-size: 1rem;
             cursor: pointer;
+            padding: 10px;
         }
 
         i.active {
@@ -978,6 +978,10 @@ img.basicInfo {
             box-shadow: var(--shadow);
             transition: .3s;
 
+            img {
+                width: unset;
+                max-height: 90px;
+            }
         }
 
 
@@ -1022,7 +1026,8 @@ img.basicInfo {
     }
 
     img {
-        width: 25%
+        width: 30%;
+        border-radius: var(--borderRadius) 0 0 var(--borderRadius);
     }
 
     .resultContainer {
